@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 2323;
-app.get('/', (req, res) => res.send('Afk bot!'));
 
-app.listen(port, () => console.log(`Afk bot is listening to http://localhost:${port}`));
+app.get('/', (req, res) => {
+  res.send('Bot is running!');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`AFK bot is listening on port ${PORT}`);
+});
